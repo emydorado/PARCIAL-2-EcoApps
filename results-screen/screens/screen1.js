@@ -5,14 +5,14 @@ export default function renderScreen1() {
 	app.innerHTML = `
         <h1>Scores</h1>
         <b id="users-count"> <b>0</b></b> usuarios en la sala
-        <div id="pool-players"></div>
+        <div id="pool-playerss"></div>
         <div id="scores-list"></div>
     `;
 
 	let currentPlayers = [];
 
 	const usersCount = document.getElementById('users-count');
-	const container = document.getElementById('pool-players');
+	const container = document.getElementById('pool-playerss');
 
 	socket.on('userJoined', (data) => {
 		usersCount.innerHTML = data?.players.length || 0;
