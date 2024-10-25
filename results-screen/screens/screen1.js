@@ -39,7 +39,7 @@ export default function renderScreen1() {
 
 			players.forEach((player) => {
 				const scoreItem = document.createElement('p');
-				scoreItem.textContent = `${player.nickname} - Puntos: ${player.points}`;
+				scoreItem.textContent = `${player.nickname}: ${player.points}`;
 				scoresContainer.appendChild(scoreItem);
 			});
 		});

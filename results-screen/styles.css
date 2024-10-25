@@ -1,24 +1,102 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(135deg, #72c6ef 0%, #004e92 100%);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
 }
 
-nav {
-  background-color: #333;
-  padding: 1em;
-}
-
-nav a {
-  color: white;
-  margin-right: 1em;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
+h1 {
+	font-size: 3rem;
+	text-align: center;
+	margin: 1rem 0;
+	animation: fadeIn 2s ease-in-out;
 }
 
 #app {
-  padding: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	animation: slideIn 1s ease-in-out;
+	width: 90%;
+	max-width: 600px;
+}
+
+#users-count {
+	font-size: 1.5rem;
+	margin: 0.5rem 0;
+	font-weight: bold;
+}
+
+#pool-players,
+#scores-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: 1rem 0;
+	width: 100%;
+}
+
+#pool-players p,
+#scores-list p {
+	margin: 0.5rem 0;
+	font-size: 1.2rem;
+	padding-left: 16rem;
+}
+
+button {
+	padding: 0.7rem 1.5rem;
+	margin: 1rem 0;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	background-color: #ff6347;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #ff4500;
+}
+
+#order-alphabetically {
+	background-color: #ffbf47;
+	color: #000;
+	transition: background-color 0.3s ease;
+}
+
+#order-alphabetically:hover {
+	background-color: #ffa500;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0);
+	}
 }
